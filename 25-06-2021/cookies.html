@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cookies</title>
+    <script>
+        function add_Cookie() {
+            var name = document.getElementById("name").value;
+            document.cookie = "username=" + name;
+        }
+
+        function show_Cookie() {
+            console.log(document.cookie)
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" value="" id="name">
+    <input type="button" value="Add cookie" onclick="add_Cookie()">
+    <input type="button" value="show cookie" onclick="show_Cookie()">
+    <h1>Click show cookies to display cookies</h1>
+
+</body>
+
+</html>

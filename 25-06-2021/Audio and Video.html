@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<script>
+    function play_Audio() {
+        document.getElementsByTagName("audio")[0].play();
+    }
+
+    function pause_Audio() {
+        document.getElementsByTagName("audio")[0].pause();
+    }
+
+    function play_Video() {
+        document.getElementsByTagName("video")[0].play();
+    }
+
+    function pause_Video() {
+        document.getElementsByTagName("video")[0].pause();
+    }
+</script>
+
+<body>
+    <audio>
+        <source src="audio.mp3" type="audio/mp3">
+        Your Browser doesn't support audio tag
+    </audio>
+    <input type="button" value="play Audio" onclick="play_Audio()">
+    <input type="button" value="Pause Audio" onclick="pause_Audio()">
+
+
+    <br>
+
+    <Video width="300px" height="300px">
+        <source src="video.mp4" type="video/mp4">
+        Your Browser doesn't support video tag
+    </Video>
+    <br>
+    <input type="button" value="play Video" onclick="play_Video()">
+    <input type="button" value="Pause Video" onclick="pause_Video()">
+
+</body>
+
+</html>

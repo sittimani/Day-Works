@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Geolocation</title>
+</head>
+
+<body>
+    <input type="button" value="Get Location" id="location">
+    <h1>Location details will appear here</h1>
+
+    <script>
+        document.getElementById('location').addEventListener('click', () => {
+
+            if (!navigator.geolocation) {
+                document.querySelector('h1').innerHTML = 'Geolocation is not supported by your browser';
+            } else {
+                document.querySelector('h1').innerHTML = 'Locating…';
+                navigator.geolocation.watchPosition(success, error);
+                //watchPosition looks for device location change if it happens it notify the application
+                //getCurrentPosition gives current location of the device for a single time.
+            }
+
+
+            function success(position) {
+                document.querySelector('h1').innerHTML = "latitude : " + position.coords.latitude + "<br> longitude : " + position.coords.longitude;
+
+            }
+
+            function error() {
+                document.querySelector('h1').innerHTML = "error";
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<body>
+    <script>
+        class Customtag extends HTMLElement {
+            constructor() {
+                super();
+
+                let shadow = this.attachShadow({
+                    mode: 'open'
+                });
+
+                //creating span tag
+                var span_tag = document.createElement("span");
+                span_tag.appendChild(document.createTextNode("Custom element creation"));
+                span_tag.setAttribute("class", "custom_element");
+
+                //creating external css
+                var link_tag = document.createElement("link");
+                link_tag.setAttribute("rel", "stylesheet");
+                link_tag.setAttribute("href", "custom.css");
+
+                //append css and span tag to  shadow tree
+                shadow.appendChild(span_tag);
+                shadow.appendChild(link_tag);
+            }
+        }
+
+        window.customElements.define('custom-tag', Customtag);
+    </script>
+
+    <custom-tag></custom-tag>
+</body>

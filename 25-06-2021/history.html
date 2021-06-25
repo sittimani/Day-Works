@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>History</title>
+
+    <script>
+        function moveBack() {
+            window.history.back();
+        }
+
+        function moveForward() {
+            window.history.forward();
+        }
+
+        function find_length() {
+            document.getElementsByTagName("h1")[0].innerHTML = "history length = " + window.history.length;
+        }
+
+        function moveSpecificPoint() {
+            window.history.go(-4);
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Back" onclick="moveBack()">
+    <input type="button" value="Forward" onclick="moveForward()">
+    <input type="button" value="Specific Point" onclick="moveSpecificPoint()">
+    <input type="button" value="length" onclick="find_length()">
+    <h1></h1>
+</body>
+
+</html>

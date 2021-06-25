@@ -1,0 +1,76 @@
+<html>
+
+<style>
+    p,
+    div {
+        display: inline-block;
+        border: 2px solid black;
+    }
+</style>
+
+<body>
+    <div id="p">
+        <p>Paragraph NO-1</p>
+        <p>Paragraph NO-2</p>
+    </div>
+    <div id="div_tag_1">Div tag 1</div>
+    <div id="div_tag_2">Div tag 2</div>
+    <div id="div_tag_3">
+        <p id="child_1">Div tag 3</p>
+    </div>
+
+</body>
+
+<script>
+    console.log(Node.ELEMENT_NODE);
+    console.log(Node.TEXT_NODE);
+    console.log(Node.COMMENT_NODE);
+
+
+    let root = document.getElementById("div_tag_3");
+    //creating element
+    let child = document.createElement("div");
+    //append a textnode to child
+    child.appendChild(document.createTextNode("created using js"));
+    //setting attributes to child element
+    child.setAttribute("style", "color:red");
+    child.setAttribute("id", "child_2");
+    //append child to root element
+    root.appendChild(child);
+
+
+
+    //changing the order of p tag using insertBefore 
+    let parrent = document.getElementById("p");
+    parrent.insertBefore(document.getElementsByTagName("p")[1], document.getElementsByTagName("p")[0]);
+
+
+    //query selector
+    let nodes = document.querySelectorAll("div");
+    nodes.forEach(Element => {
+        console.log(Element.id);
+    })
+
+    console.log(document.getElementById("div_tag_3").firstChild.innerHTML);
+    console.log(document.getElementById("child_1").nextSibling.innerHTML);
+
+    //styles using dom
+    document.getElementById("p").style.color = "red";
+    document.getElementById("div_tag_1").setAttribute("style", "background-color:green");
+</script>
+
+</html>
+
+
+
+<!--
+
+    Methods available:
+        -> firstChild
+        -> lastChild
+        -> nextSibling (for last node nextSibling is null)
+        -> previousSibling (for first node its null)
+
+    If there is a white space between nodes are available then, this methods returns #text that is the whitespace
+
+-->
