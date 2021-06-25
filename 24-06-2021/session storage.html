@@ -1,0 +1,24 @@
+<body>
+
+    <input type="text" name="" value="" placeholder="key pls" id="key">
+    <input type="text" name="" value="" placeholder="value" id="value">
+    <input type="button" name="" value="Click to add" onclick="add_to_session_storage()">
+    <input type="button" name="" value="retrieve" onclick="retrieve()">
+    <p id="paragraph"></p>
+
+    <script type="text/javascript">
+        function add_to_session_storage() {
+            var key = document.getElementById('key').value;
+            var val = document.getElementById('value').value;
+            sessionStorage.setItem(key, val);
+        }
+
+
+        function retrieve() {
+            var key = document.getElementById("key").value;
+            document.getElementById("paragraph").innerHTML = sessionStorage.getItem(key);
+        }
+    </script>
+
+
+</body>

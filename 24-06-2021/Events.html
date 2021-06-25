@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Events</title>
+    <script>
+        function single_Click() {
+            document.getElementById("text").innerHTML = "Single click happped!!!";
+        }
+
+        function double_Click() {
+            document.getElementById("text").innerHTML = "Double click happped!!!";
+        }
+
+        function mouse_Over() {
+            document.getElementById("text").innerHTML = "Mouse Over me!!!";
+        }
+
+        function mouse_Out() {
+            document.getElementById("text").innerHTML = "Mouse Out !!!";
+        }
+
+        document.getElementById("num").addEventListener("change", () => {
+            document.getElementById("text").innerHTML = "The value is:" + document.getElementById("num").value;
+        })
+    </script>
+</head>
+
+<body>
+    <h1 onmouseover="mouse_Over()" onmouseout="mouse_Out()">Mouse Over and Out example</h1>
+    <input type="text" value="Focus example" onfocus="value=''" onblur="value='Focus example'">
+    <input type="button" value="Single click" onclick="single_Click()">
+    <input type="button" value="Double click" ondblclick="double_Click()">
+    <input type="text" onchange="value_Change()" value="" id="num">
+    <h1 id="text"></h1>
+</body>
+
+</html>
