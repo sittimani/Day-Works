@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+    border: 1px solid #f5080891;
+    background: #7bf50891;
+    width: 400px;
+    height: auto;
+    margin-left: 35%;
+    margin-top: 2%;
+    margin-right: 35%;
+}
+
+.search-input,
+select,
+.submit-button {
+    padding: 2% 20%;
+    margin-left: 8%;
+    border: 1px solid #f5080891;
+}
+
+select {
+    padding: 2% 130px;
+}
+
+h6 {
+    margin-left: 8%;
+    margin-top: 5%;
+}
+
+.submit-button {
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.error-message {
+    color: red;
+    font-size: small;
+    margin-top: 20px;
+    display: block;
+    margin-left: 8%;
+}

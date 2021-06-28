@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div>
+        <form name="test" id="form-container" action="success.html" onsubmit="return validate_Form()">
+            <h6 id="name_text">Name:</h6>
+            <input type="text" class="search-input" id="name" name="username" value="" placeholder="Enter Your Name">
+            <span class="error-message" id="name_error"></span>
+
+            <h6 id="gender_text">Gender:</h6>
+            <input type="radio" class="search-input" id="male" name="gender" value="male"><label>Male</label>
+            <input type="radio" class="search-input" id="female" name="gender" value="Female"><label>Female</label>
+            <span class="error-message" id="gender_error"></span>
+
+            <h6 id="education_text">Education:</h6>
+            <input type="radio" class="search-input" id="arts" name="education" value="arts" onclick="art_course()"><label>Arts</label>
+            <input type="radio" class="search-input" id="engineering" name="education" value="engineering" onclick="engineering_course()"><label>Engineering</label>
+            <span class="error-message" id="education_error"></span>
+
+            <h6 id="email_text">Email:</h6>
+            <input type="email" class="search-input" id="email" name="email" value="" placeholder="Enter Your Email">
+            <span class="error-message" id="email_error"></span>
+
+            <h6 id="phone_text">Phone:</h6>
+            <input type="number" class="search-input" id="phoneNumber" name="phone_number" value="" placeholder="Enter Your Phone Number">
+            <span class="error-message" id="phone_error"></span>
+
+            <h6 id="hobby_text">Hobbies:</h6>
+            <input type="checkbox" class="search-input" id="reading" name="hobbie" value="reading"><label>Reading</label>
+            <input type="checkbox" class="search-input" id="playing" name="hobbie" value="playing"><label>Playing</label>
+            <input type="checkbox" class="search-input" id="writing" name="hobbie" value="writing"><label>Writing</label>
+            <span class="error-message" id="hobbie_error"></span>
+
+            <h6 id="password_text">Password:</h6>
+            <input type="password" class="search-input" id="password" name="password" value="" placeholder="Enter Your Password">
+            <span class="error-message" id="password_error"></span>
+
+            <input type="submit" class="submit-button" value="submit">
+        </form>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+
+</html>

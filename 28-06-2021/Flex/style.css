@@ -1,0 +1,24 @@
+body {
+    background-color: #aaaaaa;
+}
+
+.Flex-container {
+    background-color: white;
+    height: 400px;
+    display: flex;
+    /*flex-wrap: wrap;
+	flex-direction: row-reverse;
+	*/
+    flex-wrap: wrap;
+    /*we can write flex-wrap and direction in a single line like this*/
+    justify-content: center;
+    align-content: center;
+}
+
+.Flex-container>div {
+    background-color: green;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    color: #000;
+}
