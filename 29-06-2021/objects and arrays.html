@@ -1,0 +1,71 @@
+<html>
+
+<script>
+    let num = [1, 2, 3, 4, 5];
+    document.write("Oth element :" + num[0] + "<br>") //return 1
+    document.write("Array Length : " + num["length"] + "<br>");
+    num.push(6);
+    document.write("Array elements :" + num + "<br>");
+    num.pop();
+
+    //objects
+    var details = {
+        name: "Manikandan",
+        age: 20
+    };
+    document.write("Name :" + details.name + "<br>");
+    details.phone = 1234567890;
+    document.write("Phone :" + details.phone + "<br>");
+
+    details["All clear"] = "yes";
+    document.write("All clear : " + details["All clear"] + "<br>")
+    delete details["All clear"];
+    document.write("all clear available or not: ");
+    document.write("All clear" in details);
+    document.write("<br>")
+
+    document.write("keys: " + Object.keys(details) + "<br>")
+    Object.assign(details, {
+        age: 25
+    });
+    document.write("After assign age :" + details.age)
+
+
+    //object mutable
+
+    let object1 = {
+        value: 10
+    };
+    let object2 = object1;
+    let object3 = {
+        value: 10
+    };
+    console.log(object1 == object2);
+    // true
+    console.log(object1 == object3);
+    // false
+    object2.value = 15;
+    console.log(object1.value);
+    //  15
+    console.log(object3.value);
+
+
+    //indexof and lastindexof
+    console.log([1, 2, 3, 2, 1].indexOf(2));
+    //  1
+    console.log([1, 2, 3, 2, 1].lastIndexOf(2));
+    //  3
+
+    //slice operation
+    console.log([0, 1, 2, 3, 4].slice(2, 4));
+    // [2, 3]
+    console.log([0, 1, 2, 3, 4].slice(2));
+    // [2, 3, 4]
+
+
+    //pad start
+    console.log(String(6).padStart(3, "*"));
+    // **6
+</script>
+
+</html>

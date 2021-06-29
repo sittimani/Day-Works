@@ -1,0 +1,23 @@
+<html>
+<script>
+    "use strict";
+    let a = 10;
+    console.log(a); // without use strict throws error
+
+    try {
+        let a = 10,
+            b = 0;
+        if (b == 0) {
+            throw new Error("Divide by Zero");
+        }
+        console.log(a / b);
+    } catch (error) {
+        console.log(error);
+    }
+</script>
+
+<body>
+
+</body>
+
+</html>

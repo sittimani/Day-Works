@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <script>
+        var sayHello = (name) => {
+            document.write("Hello " + name + "<br>");
+        }
+
+        var sayHi = function(name) {
+            document.write("Hi " + name + "<br>");
+        }
+
+        function Greetings() {
+            document.write("Greetings" + "<br>");
+        }
+
+        sayHello("Manikandan");
+        sayHi("Mani");
+        Greetings();
+
+
+        function checkScope() {
+            let a = 10;
+            var c = 330;
+            if (a > 10) {
+                let b = 20;
+                var c = 20;
+                document.write(a + "+" + b + " = " + (a + b));
+            }
+            //here c is undefined and b is not accessiable which throws error
+            console.log(c);
+        }
+        checkScope();
+    </script>
+</head>
+
+</html>
