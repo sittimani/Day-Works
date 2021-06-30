@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<script>
+    let orginal = {
+        name: "MK",
+        age: 20
+    };
+    let object1 = Object.create(orginal);
+    document.write("Name : " + orginal.name + "<br>");
+
+    for (let [key, value] of Object.entries(orginal)) {
+        document.write(key + " : " + value + "<br>");
+    }
+
+    document.write("The keys are :" + Object.keys(orginal) + "<br>");
+    document.write("The values are :" + Object.values(orginal));
+
+    Object.assign(orginal, {
+        phone: 709493
+    });
+    document.write("<br>Phone :" + orginal.phone);
+
+    Object.defineProperty(orginal, "Example", {
+        value: "Example"
+    });
+    document.write("<br>example property value : " + orginal.Example);
+</script>
+
+</html>

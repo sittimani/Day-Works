@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<script>
+    let exp = new RegExp("abc");
+    // or we can create regexp like --- let exp  = /abc/;
+    document.write("The expression is :" + exp + "<br>");
+
+    document.write("The result is :" + exp.test("abcdef") + "<br>");
+    document.write("The result is : " + exp.test("acdeft") + "<br>");
+
+    //Checking any one of char in the [] is available in the string or not.
+    document.write("1234 is number or not :" + /[0-5]/.test("6781") + "<br>");
+
+    let date = /\d\d \w\w\w \d\d\d/;
+    document.write("(30 jun 2021) is match the expression or not :" + date.test("30 jun 2021") + "<br>");
+
+    //checking one or more digit in string
+    document.write("Matching more than one digit :" + /\d+/.test("mani1") + "<br>");
+
+    //checking zero or more digit in string
+    document.write("Matching more than one digit :" + /\d*/.test("mani") + "<br>");
+
+
+    //? mark denotes optional matching(here u is optional)
+    let neighbor = /neighbou?r/;
+    document.write("Matching neighbor" + neighbor.test("neighbour") + "<br>");
+    document.write(neighbor.test("neighbor") + "<br>");
+
+    //To specify a number of range or exact number of times use {}
+    //here there must be only 4 digit
+    let e = /\d{4}/;
+    document.write("4 digits only :" + e.test("1d2235d") + "<br>");
+
+    //range check
+    document.write("2 to 4 digits :" + /\d{2,4}/.test("12") + "<br>");
+
+    //using i at end of the expression makes case insenstive (/some_expression/i;)
+    //exec method return object about the match (if no match return null)
+    document.write("using exec :" + /\d+/.exec("123") + "<br>");
+
+    //Boundaries are denoted by (\b)
+    let animalCount = /\b\d+ (pig|cow|chicken)s?\b/;
+    document.write("pig available or not :" + animalCount.test("15 pigs") + "<br>");
+
+    //email
+    document.write(/\w+@\w+.\w+/.test("mani@gmail.com"));
+</script>
+
+<body>
+
+</body>
+
+</html>

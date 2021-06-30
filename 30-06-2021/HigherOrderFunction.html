@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<script>
+    //function that operates on other function,either by taking as a argument or by returning them.
+    let big = (n) => {
+        return m => m > n
+    };
+    let first = big(10);
+    document.write(first(20) + "<br>");
+
+
+    function logOnConsole(value, action) {
+        action(value);
+    }
+    logOnConsole("Hello Bhai", console.log);
+
+    ["M", "A", "N", "I"].forEach(v => {
+        document.write(v)
+    });
+
+
+    //map function will apply a set of code to each element
+    function mapFunction(x) {
+        return x / 5;
+    }
+    let array = [10, 15, 20, 25, 30];
+    array = array.map(mapFunction)
+    document.write("Array after map :" + array + "<br>");
+
+
+    //reduce function will perform some operation and returns a single value
+    function reduceFunction(x, y) {
+        return x + y;
+    }
+    document.write("Reduce function :" + array.reduce(reduceFunction) + "<br>");
+
+
+    //filter function will returns the element which statisfy the condition given in the function def
+    function filterFunction(x) {
+        return x < 4;
+    }
+    document.write("After Filter Function :" + array.filter(filterFunction) + "<br>");
+
+    //find returns the first element which statisfy the given condition
+    function findFunction(x) {
+        return x == 2;
+    }
+    document.write("Find function result :" + array.find(findFunction) + "<br>");
+    document.write("Index of find function return value :" + array.findIndex(findFunction) + "<br>");
+</script>
+
+</html>
