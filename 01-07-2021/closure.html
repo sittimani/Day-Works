@@ -1,0 +1,20 @@
+<html>
+<script>
+    function outer() {
+        var name = "Mani";
+
+        function inner() {
+            document.write(name + "<br>");
+            name += "1";
+        }
+        inner();
+        inner();
+        inner();
+    }
+    //outer();
+
+    var sample = new outer();
+    sample();
+</script>
+
+</html>
