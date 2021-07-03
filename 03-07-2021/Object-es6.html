@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<script>
+    var copy = {};
+
+    Object.assign(copy, {
+        type: "js",
+        name: "dummy.js"
+    }, {
+        type: "css"
+    }, {
+        name: "Temp.css"
+    });
+
+    document.write(copy.type + "<br>");
+    document.write(copy.name + "<br>");
+
+    var es5 = {
+        name: "mani",
+        age: function(e) {
+            return e + 2;
+        }
+    }
+    document.write("<br>" + es5.age(5));
+
+    var es6 = {
+        name: "mani",
+        age(e) {
+            return e + 2;
+        }
+    }
+    document.write("<br>" + es6.age(5));
+
+    document.write("<br>" + Object.getOwnPropertyNames(es6));
+
+
+    let parent = {
+        greetings() {
+            return "Hello ";
+        }
+    }
+
+    let child = {
+        greetings() {
+            return super.greetings() + ",How are you";
+        }
+    }
+
+    Object.setPrototypeOf(child, parent);
+    document.write("<br><h2>" + child.greetings() + "</h2>")
+</script>
+
+<body></body>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<script>
+    document.write("IIF examples:<br>");
+    (function mk(h) {
+        var a = 20;
+        document.write("A value = " + a);
+    })(dfd);
+
+    // here a is not accessiable
+
+    (() => {
+        document.write("<br>Arrow function!!!");
+    })();
+</script>
+
+<body></body>
+
+</html>
