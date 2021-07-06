@@ -1,0 +1,28 @@
+<html>
+<script>
+    let highIq = {
+        iq: 200,
+        hasIq() {
+            return true;
+        },
+        iq() {
+            return iq;
+        }
+    }
+
+    let human = {
+        hasAttitude() {
+            return true;
+        },
+        hasMoney() {
+            return true;
+        }
+    }
+
+    let ironMan = Object.assign({}, highIq, human);
+    console.log(ironMan.hasAttitude());
+</script>
+
+<body></body>
+
+</html>
