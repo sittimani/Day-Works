@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        document.getElementsByTagName("button")[0].addEventListener('click', () => {
+            alert("Hi, How was the day?");
+
+            let promise = new Promise(function(resolve, reject) {
+                setTimeout(() => {
+                    alert("Promises resolved");
+                }, 5000);
+                resolve("Not a bad, Thank you")
+            })
+
+            promise.then(function(message) {
+                alert(message);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button>Click ME</button>
+
+    <script>
+    </script>
+</body>
+
+</html>
