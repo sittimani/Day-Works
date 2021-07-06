@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        p {
+            width: 100px;
+            height: 100px;
+            border: 2px solid green;
+            margin: 5px;
+        }
+        /*
+            orientation: portrait
+            orientation: landscape
+        */
+        
+        @media screen and (orientation: portrait) {
+            p {
+                background-color: yellow;
+            }
+            #container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <p>Div 1</p>
+        <p>Div 2</p>
+        <p>Div 3</p>
+        <p>Div 4</p>
+        <p>Div 5</p>
+        <p>Div 6</p>
+        <p>Div 7</p>
+        <p>Div 8</p>
+        <p>Div 9</p>
+        <p>Div 10</p>
+    </div>
+</body>
+
+</html>

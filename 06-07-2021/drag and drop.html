@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Drag and Drop</title>
+    <script>
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function msg() {
+            alert("Drag over!!!")
+        }
+
+        function leaves(event) {
+            document.getElementsByTagName("h1")[0].innerHTML = "Drag leaves " + event.target.id;
+        }
+
+        function enter(event) {
+            document.getElementsByTagName("h1")[1].innerHTML = "Drag enter " + event.target.id;
+        }
+    </script>
+    <style>
+        div {
+            float: left;
+            width: 100px;
+            height: 35px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="Div1" ondragend="msg()" ondragleave="leaves(event)" ondragenter="enter(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+        <p id="dragelement" draggable="true" ondragstart="drag(event)">Mk</p>
+    </div>
+
+    <div id="Div2" ondragend="msg()" ondragenter="enter(event)" ondragleave="leaves(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <br><br><br><br>
+    <h1></h1>
+    <h1></h1>
+
+</body>
+
+</html>
+
+
+<!--
+
+    ondragend --- call when the drag action is ended
+    ondragleave --- when drag element leaves the area at the time it will called
+    ondragstart --- when drag starts
+    ondragenter -- when draggable elements enters a specific area
+    ondrop --- when we release the mouse
+    ondragover --- called when the element over the target place
+
+
+-->
