@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Error Handling</title>
+
+    <script>
+        function error() {
+            try {
+                allert("Hello!!!");
+            } catch (error) {
+                document.getElementById("message").innerHTML = "error";
+            } finally {
+                document.getElementById("finally").innerHTML = "final block involved";
+            }
+        }
+
+        function message() {
+            try {
+                alert("Hello!!!");
+                document.getElementById("message").innerHTML = "";
+            } catch (error) {
+                document.getElementById("message").innerHTML = "error";
+            } finally {
+                document.getElementById("finally").innerHTML = "final block involved";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <h4 id="message"></h4>
+    <h4 id="finally"></h4>
+    <button onclick="message()">Without Error</button>
+    <button onclick="error()">With Error</button>
+</body>
+
+</html>

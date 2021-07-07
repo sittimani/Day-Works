@@ -1,0 +1,36 @@
+<html>
+
+<script>
+    let a = [1, 2, 3, 4];
+
+    [b, c] = a;
+    document.write(b + "  " + c)
+
+    let rest;
+    [a, b, ...rest] = [10, 20, 30, 40, 50];
+    document.write("<br>" + a);
+    document.write("<br>" + b);
+    document.write("<br> Rest Variable : " + rest);
+
+    let object = {
+        name: "Manikandan",
+        age: 21,
+        clg: "Kn",
+        company: "Aspire"
+    };
+
+    ({
+        name,
+        age,
+        ...rest
+    } = object);
+
+    document.write("<br>Name : " + name);
+    document.write("<br>Age : " + age);
+    document.write("<br>Rest : " + rest);
+    console.log(rest);
+</script>
+
+<body></body>
+
+</html>

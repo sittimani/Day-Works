@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prototype Modify</title>
+    <script>
+        let details = function(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        details.prototype.display = function() {
+            return "Name:" + this.name + "<br>Age:" + this.age;
+        }
+
+        let person = new details("Manikandan", "22");
+        document.write("<h4>Before changing prototype</h4>");
+        document.write(person.display());
+
+        document.write("<h4>After Changing prototype:</h4>");
+        details.prototype.display = function() {
+            return "Name:" + this.name + "<br>Age:" + this.age + "<br>Team: Lamp";
+        }
+        document.write(person.display());
+    </script>
+</head>
+
+<body></body>
+
+</html>
