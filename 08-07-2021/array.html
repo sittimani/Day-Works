@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Array</title>
+    <script>
+        //concat
+        let a = [1, 2, 3, 4, 5];
+        let b = [6, 7, 8, 9, 0];
+
+        document.write("a array after concat : " + a.concat(b) + "<br>");
+
+        //every returns true if all the elements in an statisfy the condition
+        let array = [1, 2, 3, 4, 5];
+        document.write("Elements greater then 3(Every) : " + array.every(greaterThanThree));
+        document.write("<br>Elements greater then 3(Some) : " + array.some(greaterThanThree));
+
+        function greaterThanThree(x) {
+            return x > 3;
+        }
+
+        //fill returns an array with new value
+        array = ["mk", "abc", "xyz"];
+        document.write("<br>Fill returns: " + array.fill("MK"));
+    </script>
+</head>
+
+<body></body>
+
+</html>
