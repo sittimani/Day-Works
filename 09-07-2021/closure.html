@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function closure() {
+            let totalNumberOfTimeCalled = 0;
+
+            function printCount() {
+                return ++totalNumberOfTimeCalled;
+            }
+
+            return printCount;
+        }
+
+        let object = closure();
+        document.write("<br>Number of called : " + object());
+        document.write("<br>Number of called : " + object());
+        document.write("<br>Number of called : " + object());
+        document.write("<br>Number of called : " + object());
+        document.write("<br>Number of called : " + object());
+        document.write("<br>Number of called : " + object());
+        document.write("<br>Number of called : " + object());
+        document.write("<br>Number of called : " + object());
+    </script>
+</head>
+
+<body></body>
+
+</html>

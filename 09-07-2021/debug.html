@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        console.time("Test");
+
+        let a = 10;
+
+        let f = function() {
+            let a = 10,
+                b = 20;
+        }
+
+        f.prototype.add = function() {
+            return this.a + this.b;
+        }
+
+
+        console.log(f) //less information about f function
+        console.dir(f); //more information about f function
+        var array = [{
+            name: "Savitha",
+            gender: "F",
+            age: 21
+        }, {
+            name: "Manikandan",
+            gender: "M",
+            age: 15
+        }, {
+            name: "Vignesh",
+            gender: "M",
+            age: 18
+        }];
+        debugger;
+
+        console.table(array, ['name', 'gender']);
+
+
+        console.timeEnd("Test");
+    </script>
+</head>
+
+</html>
